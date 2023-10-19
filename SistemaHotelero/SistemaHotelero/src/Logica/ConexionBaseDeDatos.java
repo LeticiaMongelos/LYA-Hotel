@@ -19,7 +19,7 @@ public class ConexionBaseDeDatos {
         Connection link = null;
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             link = DriverManager.getConnection(this.url, this.user, this.password);
         } catch (ClassNotFoundException | SQLException e) {
             JOptionPane.showConfirmDialog(null, e);
